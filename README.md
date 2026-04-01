@@ -1,32 +1,53 @@
-# Order Management System
+# Order Management System Documentation
 
-## Overview
+## Architecture Overview
+This Order Management System (OMS) is designed using Clean Architecture principles, promoting separation of concerns and dependency inversion. The architecture is composed of four main layers:
 
-The Order Management System (OMS) is a comprehensive C# application designed to streamline the order processing workflow for businesses. This system provides an efficient solution for tracking orders, managing inventory, and ensuring customer satisfaction. Built with modern design principles, the OMS leverages the power of object-oriented programming, enabling easy maintainability and scalability.
+1. **Presentation Layer** - Handles user interactions, exposes API endpoints, and communicates with the application layer.
+2. **Application Layer** - Contains business logic and defines use cases.
+3. **Domain Layer** - Represents the core of the application, containing the domain models and entities.
+4. **Infrastructure Layer** - Manages external communication, such as databases and messaging services.
 
 ## Features
-- User-friendly interface for managing orders and inventory.
-- Real-time tracking of order statuses.
-- Integration with payment gateways for secure transactions.
-- Reporting tools for sales analysis and inventory management.
-- Role-based access control to ensure data security.
+- Order placement and tracking
+- Inventory management
+- Customer management
+- Reporting and analytics
 
-## Technologies Used
-- **Language:** C# 
-- **Framework:** .NET Core
-- **Database:** SQL Server
+## Project Structure
+- **/src** - Main source folder containing all application code.
+  - **/presentation** - Controllers and API endpoints.
+  - **/application** - Use cases and services.
+  - **/domain** - Domain models and interfaces.
+  - **/infrastructure** - Data access and external services.
 
-## Installation
-1. Clone the repository: `git clone https://github.com/HarimaGoncalves/example.git`
-2. Navigate to the project directory: `cd example`
-3. Restore dependencies: `dotnet restore`
-4. Run the application: `dotnet run`
+## API Endpoints
+- `POST /api/orders` - Create a new order.
+- `GET /api/orders/{id}` - Retrieve details of an order.
+- `PUT /api/orders/{id}` - Update an existing order.
+- `GET /api/orders` - List all orders.
 
-## Usage
-After installation, users can log in to the system, navigate through the dashboard, and perform operations like adding new orders, updating existing orders, and generating reports.
+## Testing Information
+The testing strategy includes unit tests, integration tests, and end-to-end tests:
+- **Unit Tests** - Validate individual components adhering to SOLID principles.
+- **Integration Tests** - Ensure different layers of the architecture work together correctly.
+- **End-to-End Tests** - Simulate user scenarios to guarantee system functionality.
 
-## Contribution
-Contributions are welcome! Please fork the repository and submit a pull request for any suggested changes or enhancements.
+## Clean Architecture
+Clean Architecture allows the system to be flexible and adaptable over time, promoting maintainability and testability.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Domain-Driven Design (DDD)
+The core of the system is designed based on DDD principles, focusing on the business domain and its complexities.
+
+## SOLID Principles
+The application follows SOLID design principles:
+- **S**: Single Responsibility Principle
+- **O**: Open/Closed Principle
+- **L**: Liskov Substitution Principle
+- **I**: Interface Segregation Principle
+- **D**: Dependency Inversion Principle
+
+## Command Query Responsibility Segregation (CQRS)
+CQRS is implemented to separate read and write operations, allowing for more scalable and maintainable code.
+- **Command Side** - Handles data modification commands.
+- **Query Side** - Handles data retrieval queries.
