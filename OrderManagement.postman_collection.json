@@ -1,0 +1,104 @@
+{
+	"info": {
+		"name": "OrderManagement API",
+		"description": "Clean Architecture + DDD Order Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7183",
+			"type": "string"
+		},
+		{
+			"key": "orderId",
+			"value": "",
+			"type": "string"
+		}
+	],
+	"item": [
+		{
+			"name": "Create Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"if (pm.response.code === 201) {",
+							"    var json = pm.response.json();",
+							"    pm.collectionVariables.set('orderId', json.id);",
+							"    pm.test('Order created successfully', function () {",
+							"        pm.expect(json.id).to.not.be.empty;",
+							"        pm.expect(json.status).to.eql('Confirmed');",
+							"    });",
+							"}"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerName\": \"John Doe\",\n  \"street\": \"123 Main St\",\n  \"city\": \"Springfield\",\n  \"state\": \"IL\",\n  \"zipCode\": \"62701\",\n  \"country\": \"US\",\n  \"items\": [\n    {\n      \"productName\": \"Laptop\",\n      \"quantity\": 1,\n      \"unitPrice\": 999.99\n    },\n    {\n      \"productName\": \"Mouse\",\n      \"quantity\": 2,\n      \"unitPrice\": 29.99\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/orders",
+					"host": ["{{baseUrl}}"],
+					"path": ["api", "orders"]
+				},
+				"description": "Creates a new order with items. Automatically saves the returned orderId for use in other requests."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/orders/{{orderId}}",
+					"host": ["{{baseUrl}}"],
+					"path": ["api", "orders", "{{orderId}}"]
+				},
+				"description": "Gets a single order by ID. Uses the orderId saved from Create Order."
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/orders",
+					"host": ["{{baseUrl}}"],
+					"path": ["api", "orders"]
+				},
+				"description": "Returns all orders."
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Order",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/orders/{{orderId}}/cancel",
+					"host": ["{{baseUrl}}"],
+					"path": ["api", "orders", "{{orderId}}", "cancel"]
+				},
+				"description": "Cancels an order. Uses the orderId saved from Create Order."
+			},
+			"response": []
+		}
+	]
+}
