@@ -1,24 +1,99 @@
-.vs/CopilotSnapshots/8E634FD5CD24BC43840F341B771BD020/5EDF111729E3624BA0887EAF78A63C42/E00DA6223987D3A25CB64B6791767AAE
-.vs/CopilotSnapshots/8E634FD5CD24BC43840F341B771BD020/5EDF111729E3624BA0887EAF78A63C42/4171B1AE66D32F2592EC1F219B749C8C
-.vs/CopilotSnapshots/8E634FD5CD24BC43840F341B771BD020/5EDF111729E3624BA0887EAF78A63C42/2A3D306B53607E44DA7DD0A7949032B8
-.vs/CopilotSnapshots/8E634FD5CD24BC43840F341B771BD020/32CBCE3EBAD060428C5B964D6632B56E/E00DA6223987D3A25CB64B6791767AAE
-.vs/CopilotSnapshots/8E634FD5CD24BC43840F341B771BD020/32CBCE3EBAD060428C5B964D6632B56E/60644C2A0817F9B724763B94F1B671CA
-.vs/CopilotSnapshots/8E634FD5CD24BC43840F341B771BD020/32CBCE3EBAD060428C5B964D6632B56E/073606633534055AB97EEC294D09E414
-.vs/OrderManagement/CopilotIndices/18.4.114.215/CodeChunks.db
-.vs/OrderManagement/CopilotIndices/18.4.111.64248/CodeChunks.db
-.vs/OrderManagement/CopilotIndices/18.4.114.215/CodeChunks.db-wal
-.vs/OrderManagement.slnx/v18/.suo
-.vs/OrderManagement.slnx/v18/.futdcache.v2
-.vs/OrderManagement.slnx/v18/DocumentLayout.json
-.vs/OrderManagement.slnx/DesignTimeBuild/.dtbcache.v2
-.vs/OrderManagement.slnx/config/applicationhost.config
-.vs/OrderManagement.slnx/v18/DocumentLayout.backup.json
-.vs/OrderManagement/CopilotIndices/18.4.114.215/CodeChunks.db-shm
-.vs/OrderManagement.slnx/FileContentIndex/6932c29e-e3b7-45c4-8fd9-89b3f037c5d9.vsidx
-.vs/OrderManagement.slnx/FileContentIndex/d614d522-0f09-48f4-a1e7-f167ea8e4864.vsidx
-.vs/OrderManagement.slnx/copilot-chat/668d6632/sessions/d54f638e-24cd-43bc-840f-341b771bd020
-.vs/CopilotSnapshots/8E634FD5CD24BC43840F341B771BD020/state.mpack
-.vs/OrderManagement/CopilotIndices/18.4.114.215/SemanticSymbols.db
-.vs/OrderManagement/CopilotIndices/18.4.111.64248/SemanticSymbols.db
-.vs/OrderManagement/CopilotIndices/18.4.114.215/SemanticSymbols.db-shm
-.vs/OrderManagement/CopilotIndices/18.4.114.215/SemanticSymbols.db-wal
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options directory
+.vs/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Rider IDE
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Local user-specific files
+LocalUserAppData/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+
+# NuGet package restore lockfile
+packages.lock.json
+
+# Rider backups
+.idea/backup
+
+# Entity Framework
+*.edmx.diagram
+
+# dotnet user secrets
+.user.secrets
+**/Properties/launchSettings.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+
+# Node modules (if you have any frontend code)
+node_modules/
+npm-debug.log
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Optional npm cache directory
+.npm
+
+# Output of 'npm pack'
+*.tgz
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Misc
+.DS_Store
+*.db
+*.sqlite
