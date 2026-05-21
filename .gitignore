@@ -172,3 +172,4 @@ lerna-debug.log*
 .DS_Store
 *.db
 *.sqlite
+/src/OrderManagement.WebApi/OrderManagement.WebApi.csproj.user
