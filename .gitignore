@@ -14,6 +14,21 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Compiled & Binary files
+*.dll
+*.exe
+*.pdb
+*.pdbx
+*.so
+*.dylib
+*.lib
+*.a
+*.o
+*.obj
+*.ilk
+*.exp
+*.out
+
 # Visual Studio cache/options directory
 .vs/
 
@@ -33,6 +48,8 @@ bld/
 *.user
 *.userosscache
 *.sln.docstates
+*.csproj.user
+*.vbproj.user
 
 # Local user-specific files
 LocalUserAppData/
@@ -118,6 +135,15 @@ StyleCopReport.xml
 *.xsd.cs
 
 # Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# Local tunnel for HTTPS
+.localbridge
+
+# Copilot snapshots/cache
+.claude/
 *.psess
 *.vsp
 *.vspx
